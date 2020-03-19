@@ -1,0 +1,11 @@
+.user-info__edit {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    display: block;
+    cursor: pointer;
+    margin-top: 24px;
+    max-width: 38px;
+    max-height: 18px;
+    font-size: 12px;
+}

@@ -1,0 +1,10 @@
+.popup__tip {
+    color: red;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 0px;
+    min-height: 15px;
+  }

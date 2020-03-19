@@ -1,0 +1,13 @@
+.popup__image-container {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.popup__image {
+  display: block;
+  max-width: 80vw;
+  max-height: 80vh;
+}
