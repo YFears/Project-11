@@ -1,4 +1,4 @@
-class FormValidator {
+export class FormValidator {
     constructor(form, tipName, tipLink, popupButton) {
         this.form = form;
         this.tipName = tipName;

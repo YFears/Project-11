@@ -1,3 +1,9 @@
+import {Popup} from './Popup.js';
+import {Userinfo} from './Userinfo.js';
+import {FormValidator} from './FormValidator.js';
+import {Card} from './Card.js';
+import {CardList} from './CardList.js';
+import {Api} from './api.js';
 (function () {
     const formPlace = document.forms.new;
     const formProfile = document.forms.profile;
@@ -105,7 +111,7 @@
     /*  2. Загрузка первоначальных карточек с сервера
         5. Отображение количества лайков карточки */
     function getInfoCard(res) {
-        addListCard = new CardList(placesList, res, getNewCard);
+        const addListCard = new CardList(placesList, res, getNewCard);
         res.forEach((elem, index) => {
             document.querySelectorAll('.place-card')[index].querySelector('.place-card__likes').textContent = elem.likes.length;
             if (elem.owner._id === '335fb420a4cf8f511d4df8c2') {
@@ -180,31 +186,11 @@
             })
             .finally(() => {
                 renderLoading(false, popupProfileButton);
-                /* REVIEW. Надо исправить. Нелогично. Получается, что даже, если произойдёт ошибка, и данные не сохранятся на сервере
-                у Вас всё равно на страницу занесётся информация из полей ввода формы? Так неправильно, потому что, если данные не
-                зафиксировались на сервере, то и на странице они не должны обновляться. Поэтому данные, во-первых, должны заноситься на страницу
-                только в случае успешного запроса, и, во-вторых, не из полей формы, а из ответа сервера, который вернёт Вам объект с данными
-                профиля, которые только что сохранились на сервере. Об этом объекте прочитайте в пункте "3. Редактирование профиля"
-                описания задания. Поэтому конструкция работы с методом api.setUserData должна быть примерно такой:
-
-                api.setUserData(popupEditInputName.value, popupEditInputLink.value)
-                    .then((res-это и есть объект с данными о прфиле с сервера) => {
-                            занесение на страницу res.name и res.about, возможно, исправленным методом updateUserInfo
-                            proPopup.close();
-                    })
-                    .catch(error => {
-                            console.log(`Error setting user data - ${error}`);
-                    })
-                    ...
-                +*/
-                /* REVIEW. Надо исправить. Закрытие окна нужно перенести в метод then, чтобы в случае успешного ответа окно закрылось после
-                обработки ответа, а в случае неуспешного не закрывалось вообще - можно предложить пользователю попробовать ещё раз
-                или пользователь выйдет сам по крестику. +*/
             });
 
     });
     popupUserEditButton.addEventListener('click', function (event) {
-        proPopup.open(event);        
+        proPopup.open(event);
         user.setUserInfo();
         validator.renderUser();
         validator.trueForm();
@@ -257,4 +243,15 @@
 ответа сервера (подробности в ревью в этом модуле).
 4. Надо убирать сообщения об ошибках с формы профиля при её открытии и делать кнопку "Сохранить" активной и чёрного цвета.
 Сейчас это происходит не во всех случаях, хотя в 7-м задании у Вас этот функционал работал прекрасно!
-+*/
++
+
+
+REVIEW2. Резюме2
+
+Ошибки исправлены.
+
+
+Задание принято!
+
+
+*/
