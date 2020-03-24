@@ -44,7 +44,7 @@ import {Api} from './api.js';
     /* 1. Загрузка информации о пользователе с сервера
     10. Улучшенный UX при редактировании профиля */
     const api = new Api({
-        baseUrl: 'https://praktikum.tk/cohort8',
+        baseUrl: NODE_ENV==='development' ? 'http://praktikum.tk/cohort8' : 'https://praktikum.tk/cohort8',
         headers: {
             authorization: '77821590-12f7-454f-b816-e15abecec89c',
             'Content-Type': 'application/json'

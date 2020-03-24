@@ -1,10 +1,13 @@
-<a href="https://yfears.github.io/Project-11/"><img src="https://pictures.s3.yandex.net/resources/Screen_Shot_2019-05-22_at_15.35.59_1565336150.png" title="Mesto Russia" alt="Mesto Russia"></a>
+Template | Personalised Version
+--- | ---
+<img src="https://pixs.ru/images/2020/03/24/K.png" title="Mesto Russia" alt="Mesto Russia"> | <a href="https://yfears.github.io/Project-11/"><img src="https://pixs.ru/images/2020/03/24/YF.png" title="Mesto Russia" alt="Mesto Russia"></a>
 
 # [Яндекс.Практикум - Сервис Mesto Russia](https://yfears.github.io/Project-11/ "'Сервис Mesto Russia' - интерактивная страница, куда можно добавлять фотографии, удалять их и ставить лайки")
 
-> Версия v1.0.1
+> Версия v1.0.2
 
 - [Installation](#installation)
+- [Using](#Using)
 
 ---
 
@@ -18,7 +21,7 @@
 git clone https://github.com/YFears/Project-11.git
 ```
 
-### Using
+## Using
 - Use these commands to build, develop or deploy project
 
 ```bash
